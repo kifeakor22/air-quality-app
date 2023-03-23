@@ -61,13 +61,13 @@ const Search = () => {
         inputValue.length >= 3 &&
         !selectedOption && <div>No cities found</div>}
       {filteredOptions.length > 0 && !selectedOption && (
-        <ul>
+        <section>
           {filteredOptions.map((option) => (
-            <li key={option.name} onClick={() => handleOptionSelect(option)}>
+            <div key={option.name} onClick={() => handleOptionSelect(option)}>
               {`${option.name}, ${option.country}`}
-            </li>
+            </div>
           ))}
-        </ul>
+        </section>
       )}
     </div>
   );

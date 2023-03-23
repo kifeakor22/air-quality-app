@@ -1,11 +1,12 @@
-
-import './App.css';
-import Jumbotron from './components/jumbotron';
+import "./App.css";
+import Jumbotron from "./components/jumbotron";
+import Search from "./components/search/Search";
 
 function App() {
   return (
     <div className="App">
-      <Jumbotron/>  
+      <Jumbotron />
+      <Search />
     </div>
   );
 }

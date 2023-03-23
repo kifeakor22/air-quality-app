@@ -1,13 +1,28 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Import fonts from Google api */
+@import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
+
+/* Store colours and fonts for use sitewide */
+:root {
+  --mainColor: #005250;
+  --accentColor: white;
+  --vgoodColor: #8ea604;
+  --goodColor: #f5bb00;
+  --fairColor: #ec9f05;
+  --poorColor: #d76a03;
+  --vpoorColor: #bf3100;
+  --coreFont: Comfortaa;
 }

@@ -1,0 +1,21 @@
+.jumbotron {
+    padding: 20px;
+    font-size: large;
+    
+    color: black;
+    font-weight: bolder;
+    height: 350px;
+}
+
+.image {
+    background-image: url(./images/jumbotron.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    
+}
+
+.cta {
+   padding: 10px;
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PollutionScore from '../pollution-score/PollutionScore';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPersonBiking,
@@ -27,14 +28,14 @@ function AirPollutionIcon({ score }) {
     } else if (score > 200 && score <= 500) {
       setIcon(faTriangleExclamation);
     }
-  }, [score]);
+  }, [PollutionScore]);
 // return the component, use icon state variable as prop
   return <FontAwesomeIcon icon={icon} />;
 }
 
 export default AirPollutionIcon;
 
-// to use this component in code " <AirPollutionIcon score={75} /> " where the score number is dynamic
+// to use this component in code " <AirPollutionIcon score={} /> " where the score number is dynamic
 
 // to import this component and use elsewhere:
 
@@ -43,10 +44,8 @@ export default AirPollutionIcon;
 // function App() {
 //     return (
 //       <div>
-//         <AirPollutionIcon score={75} />
+//         <AirPollutionIcon score={} />
 //       </div>
 //     );
 //   }
-  
-//   export default App;
   

@@ -22,8 +22,8 @@ const Search = () => {
       // Check if user has entered at least 3 characters, then start filtering the cities object
       if (value.length >= 3) {
         const filteredCities = cities.filter((city) =>
-          city.name.toLowerCase().includes(value)
-        );
+  city.name.toLowerCase().startsWith(value)
+);
         // Display new list of cities that match the filter
         setFilteredOptions(filteredCities);
       } else {

@@ -1,6 +1,8 @@
 .jumbotron {
   padding: 20px;
   font-size: large;
+  box-shadow: 0 14px 28px var(--mainColor), 0 10px 10px var(--mainColor);
+  
 
   color: var(--mainColor);
   font-weight: bolder;

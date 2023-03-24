@@ -2,7 +2,7 @@
   color: var(--mainColor);
   background-color: var(--secondaryColor);
   border: 2px solid var(--mainColor);
-  font-family: Comfortaa;
+  font-family: var(--coreFont);
   border-radius: 2px;
   padding: 5px;
   margin: 5px;

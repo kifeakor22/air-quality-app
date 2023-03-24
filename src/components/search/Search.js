@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import cities from "./cities.json";
 import "./style.css";
-import CurrentLocation from "../current-location/CurrentLocation";
 
-const Search = () => {
+const Search = ({ setLocation }) => {
   const [inputValue, setInputValue] = useState("");
   // Filter the object of cities
   const [filteredOptions, setFilteredOptions] = useState([]);
@@ -23,7 +22,7 @@ const Search = () => {
       // Check if user has entered at least 3 characters, then start filtering the cities object
       if (value.length >= 3) {
         const filteredCities = cities.filter((city) =>
-          city.name.toLowerCase().includes(value)
+          city.name.toLowerCase().startsWith(value)
         );
         // Display new list of cities that match the filter
         setFilteredOptions(filteredCities);
@@ -42,6 +41,7 @@ const Search = () => {
     setFilteredOptions([]);
     // option is now the object with lon and lat values which can be used elsewhere in the app
     console.log(option);
+    setLocation(option);
   };
 
   return (
@@ -70,7 +70,6 @@ const Search = () => {
           ))}
         </section>
       )}
-      <CurrentLocation {...selectedOption}>Test</CurrentLocation>
     </div>
   );
 };

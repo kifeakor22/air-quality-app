@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import cities from "./cities.json";
 import "./style.css";
+import CurrentLocation from "../current-location/CurrentLocation";
 
 const Search = () => {
   const [inputValue, setInputValue] = useState("");
   // Filter the object of cities
   const [filteredOptions, setFilteredOptions] = useState([]);
   // User selected choice from list
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState("");
 
   // Function to update the filtering on every key stroke after 3 characters are entered
   const handleInputChange = (event) => {
@@ -69,6 +70,7 @@ const Search = () => {
           ))}
         </section>
       )}
+      <CurrentLocation {...selectedOption}>Test</CurrentLocation>
     </div>
   );
 };

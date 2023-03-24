@@ -1,7 +1,7 @@
 import React from "react";
 
-const CurrentLocation = () => {
-  return <div>Test</div>;
+const CurrentLocation = (props) => {
+  return <div>{props.name}</div>;
 };
 
 export default CurrentLocation;

@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import cities from "./cities.json";
 import "./style.css";
 
-const Search = () => {
+const Search = ({ setLocation }) => {
   const [inputValue, setInputValue] = useState("");
   // Filter the object of cities
   const [filteredOptions, setFilteredOptions] = useState([]);
   // User selected choice from list
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState("");
 
   // Function to update the filtering on every key stroke after 3 characters are entered
   const handleInputChange = (event) => {
@@ -22,8 +22,8 @@ const Search = () => {
       // Check if user has entered at least 3 characters, then start filtering the cities object
       if (value.length >= 3) {
         const filteredCities = cities.filter((city) =>
-  city.name.toLowerCase().startsWith(value)
-);
+          city.name.toLowerCase().startsWith(value)
+        );
         // Display new list of cities that match the filter
         setFilteredOptions(filteredCities);
       } else {
@@ -41,6 +41,7 @@ const Search = () => {
     setFilteredOptions([]);
     // option is now the object with lon and lat values which can be used elsewhere in the app
     console.log(option);
+    setLocation(option);
   };
 
   return (

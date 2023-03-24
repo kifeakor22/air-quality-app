@@ -20,11 +20,11 @@ const Jumbotron = () => {
             </p>
             <hr className="my-4" />
             <div className="cta">
-              <label for="cityName">Enter city name to search:</label>
+              {/* <label for="cityName">Enter city name to search:</label>
 
               <button className=" btn btn-dark" type="submit">
                 Search
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

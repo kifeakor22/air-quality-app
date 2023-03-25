@@ -1,4 +1,5 @@
 import React from 'react';
+import "./style.css";
 
 const Forecast = ({ forecast }) => {
   if (!forecast) {
@@ -6,10 +7,13 @@ const Forecast = ({ forecast }) => {
   }
 
   return (
-    <div>
+    <div className="forecast-container">
       {forecast.daily?.o3?.map((day) => (
-        <div key={day.day}>
-          {day.day}
+        <div className="day-card" key={day.day}>
+            <h1>{day.day}</h1>
+            <p>Average: {day.avg}</p>
+            <p>Min: {day.min}</p>
+            <p>Max: {day.max}</p>
         </div>
       ))}
     </div>

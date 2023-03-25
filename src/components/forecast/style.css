@@ -1,0 +1,17 @@
+.forecast-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.day-card {
+    color: var(--mainColor);
+    background-color: var(--secondaryColor);
+    border: 2px solid var(--mainColor);
+    font-family: var(--coreFont);
+    border-radius: 2px;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 8px 20px 0 rgba(0, 0, 0, 0.48);
+    border-radius: 5px;
+}

@@ -69,7 +69,7 @@ const Search = ({ setLocation, setApi }) => {
     }
  useEffect(()=> {
         fetchAirStat()
-    }, [selectedCity])
+    }, [selectedCity, fetchAirStat])
 
 
   

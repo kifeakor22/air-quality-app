@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import cities from "./cities.json";
 import "./style.css";
 
-const Search = ({ setLocation }) => {
+const Search = ({ setLocation, setApi }) => {
+   const [selectedCity, setSelectedCity] = useState('london')
   const [inputValue, setInputValue] = useState("");
   // Filter the object of cities
   const [filteredOptions, setFilteredOptions] = useState([]);
   // User selected choice from list
   const [selectedOption, setSelectedOption] = useState("");
+  
 
   // Function to update the filtering on every key stroke after 3 characters are entered
   const handleInputChange = (event) => {
@@ -35,6 +37,9 @@ const Search = ({ setLocation }) => {
 
   // Function to handle what happens when a user clicks on an option from the list
   const handleOptionSelect = (option) => {
+   
+
+   
     // Display city name and country code
     setInputValue(`${option.name}, ${option.country}`);
     setSelectedOption(option);
@@ -42,8 +47,32 @@ const Search = ({ setLocation }) => {
     // option is now the object with lon and lat values which can be used elsewhere in the app
     console.log(option);
     setLocation(option);
+    setSelectedCity(option.name);
+    console.log(selectedCity)
+    
+    
   };
+  
 
+   
+
+
+  const fetchAirStat = async () => {
+    let city = selectedCity
+        const data = await fetch(`https://api.waqi.info/feed/${city}/?token=cdcd0887b8ffcd7fd08989ee1d28e5df9c271831`)
+        const response = await data.json()
+
+        console.log(`searched city is ${city}`)
+        console.log(response.data)
+        setApi(response.data)
+        
+    }
+ useEffect(()=> {
+        fetchAirStat()
+    }, [selectedCity])
+
+
+  
   return (
     <div>
       <input

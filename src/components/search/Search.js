@@ -61,7 +61,7 @@ const Search = ({ setLocation, setApi }) => {
         console.log(response.data)
         setApi(response.data)
         
-    },[selectedCity])
+    },[selectedCity, setApi])
   
 
    

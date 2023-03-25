@@ -1,14 +1,14 @@
 import React from 'react';
 import "./style.css";
 
-const Forecast = ({ forecast }) => {
+const Forecast = ({ forecast, dominentpol}) => {
   if (!forecast) {
     return <div>No data available</div>
   }
 
   return (
     <div className="forecast-container">
-      {forecast.daily?.o3?.map((day) => {
+      {forecast.daily?.[dominentpol]?.map((day) => {
         const date = new Date(day.day);
         const weekday = date.toLocaleString('en-US', { weekday: 'long' });
         const avg = day.avg;

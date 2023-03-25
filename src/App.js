@@ -4,6 +4,7 @@ import CurrentLocation from "./components/current-location/CurrentLocation";
 import Jumbotron from "./components/jumbotron";
 import Search from "./components/search/Search";
 import Airquality from "./components/airqualitystats/airqaulitystats";
+import Forecast from "./components/forecast/Forecast";
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState("");
@@ -15,6 +16,7 @@ function App() {
       <Search setLocation={setCurrentLocation} setApi={setApiData} />
       <CurrentLocation {...currentLocation} />
       <Airquality {...apiData}/>
+      <Forecast {...apiData}/>
     </div>
   );
 }

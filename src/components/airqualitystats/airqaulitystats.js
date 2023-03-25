@@ -12,6 +12,7 @@ const Airquality = ({aqi,dominentpol,city })=> {
             Main Pollutant: {dominentpol}
         </div>
         <div>
+            City:  
         </div>
         </>
     )

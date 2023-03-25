@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import cities from "./cities.json";
 import "./style.css";
 
@@ -52,12 +52,7 @@ const Search = ({ setLocation, setApi }) => {
     
     
   };
-  
-
-   
-
-
-  const fetchAirStat = async () => {
+  const fetchAirStat = useCallback(async () => {
     let city = selectedCity
         const data = await fetch(`https://api.waqi.info/feed/${city}/?token=cdcd0887b8ffcd7fd08989ee1d28e5df9c271831`)
         const response = await data.json()
@@ -66,12 +61,15 @@ const Search = ({ setLocation, setApi }) => {
         console.log(response.data)
         setApi(response.data)
         
-    }
+    },[selectedCity])
+  
+
+   
+
+
  useEffect(()=> {
-        fetchAirStat()
-    }, [selectedCity])
-
-
+  fetchAirStat()   
+    }, [selectedCity, fetchAirStat])
   
   return (
     <div>

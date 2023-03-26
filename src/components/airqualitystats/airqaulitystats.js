@@ -4,6 +4,8 @@ import './style.css'
 const Airquality = ({aqi,dominentpol, iaqi })=> {
     
 return (
+    <>
+   
   <div style={{ display: "flex", justifyContent: "center" }}>
     <div className="card airstat">
       <div>AQI: {aqi}</div>
@@ -18,11 +20,14 @@ return (
                 </li>
               </ul>
             </div>
+        
           ))}
         </div>
       )}
     </div>
   </div>
+   <img src={require('./images/aqiKey.PNG')}/>
+  </>
 );
 
 }

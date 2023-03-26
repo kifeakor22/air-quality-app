@@ -49,6 +49,7 @@ const Search = ({ setLocation, setApi }) => {
     setLocation(option);
     setSelectedCity(option.name);
     console.log(selectedCity)
+    console.log(option)
     
     
   };

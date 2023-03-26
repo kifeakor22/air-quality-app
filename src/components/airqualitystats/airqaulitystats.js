@@ -26,7 +26,7 @@ return (
       )}
     </div>
   </div>
-   <img src={require('./images/aqiKey.PNG')}/>
+   <img src={require('./images/aqiKey.PNG')} alt='color code'/>
   </>
 );
 

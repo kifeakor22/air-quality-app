@@ -5,6 +5,6 @@
     font-size: larger;
   }
 
-.search {
+.navbar > .search {
     width: 40vw;
 }

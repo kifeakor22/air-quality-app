@@ -5,6 +5,7 @@ import Jumbotron from "./components/jumbotron";
 import Search from "./components/search/Search";
 import Airquality from "./components/airqualitystats/airqaulitystats";
 import Forecast from "./components/forecast/Forecast";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState("");
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Jumbotron />
       <Search setLocation={setCurrentLocation} setApi={setApiData} />
       <CurrentLocation {...currentLocation} />

@@ -1,0 +1,10 @@
+.navbar a{  
+    color: var(--mainColor);
+    font-weight: bolder;
+    padding: 20px;
+    font-size: larger;
+  }
+
+.search {
+    width: 40vw;
+}

@@ -15,7 +15,7 @@ return (
         <div>Main Pollutant: {dominentpol}</div>
         {iaqi && (
           <div>
-            {Object.keys(iaqi).filter(key => key !== "w" && key !== "t" && key !== "h" && key !== "p")
+            {Object.keys(iaqi).filter(key => key !== "w" && key !== "t" && key !== "h" && key !== "p" && key !== "wg")
             .map((key) => {   
                 if(iaqi[key].v <= 50) {
                     bgColor = 'var(--vgoodColor)';

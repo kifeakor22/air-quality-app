@@ -19,6 +19,7 @@ function App() {
       <CurrentLocation {...currentLocation} />
       <Airquality {...apiData} />
       <Forecast {...apiData} />
+      <Health {...apiData} />
     </div>
   );
 }

@@ -8,10 +8,7 @@ const CurrentLocation = ({ name = 'london', lat, lng, country }) => {
   return (
     <div className="current-location">
       <FontAwesomeIcon icon={faLocationDot} className="icon" />
-     {name} , <span className="bold">{country}</span>
-      <div className="latlong">
-        Latitude: {lat} Longitude: {lng}
-      </div>
+     {name}, <span className="bold">{country}</span>
     </div>
   );
 };

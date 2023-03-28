@@ -15,9 +15,9 @@ const Navbar = () => {
       <div className="collapse navbar-collapse justify-content-end pe-3 col" id="navbarNavDropdown">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <a className="nav-link" href="#">
+            <h3 className="nav-link">
               Home <span className="sr-only">(current)</span>
-            </a>
+            </h3>
           </li> 
         </ul>
       </div>

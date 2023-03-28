@@ -7,3 +7,7 @@
   padding: 5px;
   margin: 5px;
 }
+
+.search-container {
+  display: flex;
+}

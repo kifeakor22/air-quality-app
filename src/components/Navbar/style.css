@@ -1,18 +1,36 @@
-.navbar a{  
-    color: var(--mainColor);
-    font-weight: bolder;
-    padding: 20px;
-    font-size: larger;
+.navbar a {
+  color: var(--mainColor);
+  font-weight: bolder;
+  padding: 20px;
+  font-size: larger;
 }
 
+.navbar {
+  justify-content: space-between;
+}
 .search {
-    width: 40vw;
+  width: 40vw;
 }
 
-.dropdown-menu{
-  display: block!important;
+.dropdown-menu {
+  display: block !important;
 }
 
-.hide{
+.hide {
   display: hide;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    display: none;
+  }
+  .search {
+    display: flex;
+    width: 90vw;
+    align-self: center;
+  }
+  .navbar {
+    display: flex;
+    justify-content: center !important;
+  }
 }

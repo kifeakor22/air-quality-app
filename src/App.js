@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import CurrentLocation from "./components/current-location/CurrentLocation";
 import Jumbotron from "./components/jumbotron";
 import Search from "./components/search/Search";
-import Airquality from "./components/airqualitystats/airqaulitystats";
+import Airquality from "./components/airqualitystats/airqualitystats";
 import Forecast from "./components/forecast/Forecast";
 import Health from "./components/health/Health";
 import Navbar from "./components/Navbar/Navbar";

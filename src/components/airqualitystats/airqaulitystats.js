@@ -42,12 +42,12 @@ return (
             }
             return (
               <div className="card" style={{ width: "18rem" }}>
-                <ul className="list-group list-group-flush" style={{ listStyleType: "none", display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 0 }}>
+                <ul className="list-group list-group-flush card-item" style={{ listStyleType: "none", display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 0 }}>
                   <li key={key}>
                     {key}: {Math.floor(iaqi[key].v)}
                   </li>
                   <li>
-                    <FontAwesomeIcon icon={faCircle} className='fa-beat' style={{color: bgColor, border: '1px solid white', borderRadius: '50%'}}   title={`${key}: ${Math.floor(iaqi[key].v)}`}/>
+                    <FontAwesomeIcon icon={faCircle} className='fa-beat card-item' style={{color: bgColor, border: '1px solid white', borderRadius: '50%'}}   title={`${key}: ${Math.floor(iaqi[key].v)}`}/>
                   </li>
                 </ul>
               </div>)

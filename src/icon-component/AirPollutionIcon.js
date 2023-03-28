@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPersonBiking,
   faPersonWalking,
-  faFaceExhaling,
+  faSadTear,
   faHeadSideMask,
   faLungsVirus,
   faTriangleExclamation
@@ -21,7 +21,7 @@ function AirPollutionIcon({ score }) {
     } else if (score > 25 && score <= 50) {
       setIcon(faPersonWalking);
     } else if (score > 50 && score <= 100) {
-      setIcon(faFaceDowncastSweat);
+      setIcon(faSadTear);
     } else if (score > 100 && score <= 150) {
       setIcon(faHeadSideMask);
     } else if (score > 150 && score <= 200) {

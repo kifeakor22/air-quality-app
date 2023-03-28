@@ -1,10 +1,9 @@
-[{
+[
+  {
     "o3": "Ground-level ozone",
     "co": "Carbon monoxide",
     "so2": "Sulfur dioxide",
     "no2": "Nitrogen dioxide",
-    "PM2.5 and PM10" : "Particle pollution (also known as particulate matter"
-}]
-
-
-
+    "PM2.5 and PM10": "Particle pollution (also known as particulate matter)"
+  }
+]

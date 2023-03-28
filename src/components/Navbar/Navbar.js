@@ -5,9 +5,9 @@ import "./style.css";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light px-3 justify-content-between">
-      <a className="navbar-brand col-3">
+      <h3 className="navbar-brand col-3" >
         City Air Quality Checker
-      </a>
+      </h3>
       <div className="d-flex justify-content-center col-6">
         <Search />
       </div>

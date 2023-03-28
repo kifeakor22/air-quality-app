@@ -3,7 +3,7 @@ import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
-const CurrentLocation = ({ name = 'london', lat, lng, country }) => {
+const CurrentLocation = ({ name='London', lat, lng, country }) => {
   console.log(`name is ${name}`);
   return (
     <div className="current-location">

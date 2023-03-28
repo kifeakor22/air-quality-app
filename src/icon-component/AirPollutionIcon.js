@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import "./AirPollutionIcon.css";
 import PollutionScore from '../pollution-score/PollutionScore';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -20,7 +21,7 @@ function AirPollutionIcon({ score }) {
     } else if (score > 25 && score <= 50) {
       setIcon(faPersonWalking);
     } else if (score > 50 && score <= 100) {
-      setIcon(faFaceExhaling);
+      setIcon(faFaceDowncastSweat);
     } else if (score > 100 && score <= 150) {
       setIcon(faHeadSideMask);
     } else if (score > 150 && score <= 200) {
@@ -32,6 +33,7 @@ function AirPollutionIcon({ score }) {
 // return the component, use icon state variable as prop
   return <FontAwesomeIcon icon={icon} />;
 }
+
 
 export default AirPollutionIcon;
 

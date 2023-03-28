@@ -13,12 +13,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Jumbotron />
-      <Search setLocation={setCurrentLocation} setApi={setApiData} />
+      <Navbar setLocation={setCurrentLocation} setApi={setApiData}/>
       <CurrentLocation {...currentLocation} />
       <Airquality {...apiData}/>
       <Forecast {...apiData}/>
+      <Jumbotron />
     </div>
   );
 }

@@ -10,7 +10,7 @@ const Forecast = ({ forecast, dominentpol }) => {
   today.setHours(0, 0, 0, 0); // Sets so that it is not actual time, but start of the day
 
   return (
-    <div className="forecast-container">
+    <div className="forecast-container container align-content-center">
       {forecast.daily?.[dominentpol]?.map((day) => {
         const date = new Date(day.day);
         // Return null for days before today to remove old dates from data
@@ -36,7 +36,7 @@ const Forecast = ({ forecast, dominentpol }) => {
 
         return (
           <div
-            className="day-card"
+            className="day-card d-flex flex-column justify-content-around"
             key={day.day}
             style={{ backgroundColor: bgColor }}
           >

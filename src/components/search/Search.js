@@ -1,105 +1,70 @@
 import React, { useState, useEffect, useCallback } from "react";
 import cities from "./cities.json";
+import axios from "axios";
 import "./style.css";
 
 const Search = ({ setLocation, setApi }) => {
-   const [selectedCity, setSelectedCity] = useState('london')
-  const [inputValue, setInputValue] = useState("");
-  // Filter the object of cities
-  const [filteredOptions, setFilteredOptions] = useState([]);
-  // User selected choice from list
-  const [selectedOption, setSelectedOption] = useState("");
-  
+  const [query, setQuery] = useState('');
+  const [loading, setLoading] = useState(false)
+  const [searchResultsClass, setSearchResultsClass] = useState("hide")
 
-  // Function to update the filtering on every key stroke after 3 characters are entered
-  const handleInputChange = (event) => {
-    const value = event.target.value.toLowerCase();
-    setInputValue(value);
-
-    // Reset selectedOption if user continues to type
-    if (selectedOption) {
-      setSelectedOption(null);
-      setFilteredOptions([]);
-    } else {
-      // Check if user has entered at least 3 characters, then start filtering the cities object
-      if (value.length >= 3) {
-        const filteredCities = cities.filter((city) =>
-          city.name.toLowerCase().startsWith(value)
-        );
-        // Display new list of cities that match the filter
-        setFilteredOptions(filteredCities);
-      } else {
-        // Set no filter if the user hasn't typed at least 3 characters
-        setFilteredOptions([]);
-      }
+  const onChange = (e) => {
+    setQuery(e.target.value);
+    if(query.length < 2){
+      setSearchResultsClass("hide")
     }
-  };
+    else{
+      setSearchResultsClass("dropdown-menu")
+    }
+  }
 
-  // Function to handle what happens when a user clicks on an option from the list
-  const handleOptionSelect = (option) => {
-   
-
-   
-    // Display city name and country code
-    setInputValue(`${option.name}, ${option.country}`);
-    setSelectedOption(option);
-    setFilteredOptions([]);
-    // option is now the object with lon and lat values which can be used elsewhere in the app
-    console.log(option);
-    setLocation(option);
-    setSelectedCity(option.name);
-    console.log(selectedCity)
-    console.log(option)
+  const handleCitySelect = (city) => {
+    setQuery(`${city.name}, ${city.country}`)
+    setLocation(city);
+    setSearchResultsClass("hide")
     
-    
-  };
-  const fetchAirStat = useCallback(async () => {
-    let city = selectedCity
-        const data = await fetch(`https://api.waqi.info/feed/${city}/?token=cdcd0887b8ffcd7fd08989ee1d28e5df9c271831`)
-        const response = await data.json()
+    const lat = city.lat;
+    const long = city.lng;
+    getAQI(lat, long);
+  }
 
-        console.log(`searched city is ${city}`)
-        console.log(response.data)
-        setApi(response.data)
-        
-    },[selectedCity, setApi])
-  
-
-   
-
-
- useEffect(()=> {
-  fetchAirStat()   
-    }, [selectedCity, fetchAirStat])
-  
-  return (
-    <div>
-      <input
-        className="search"
-        type="text"
-        placeholder="Start typing your city..."
-        value={
-          selectedOption
-            ? `${selectedOption.name}, ${selectedOption.country}`
-            : inputValue
+  const getAQI = async (lat, long) => {
+        try{
+            setLoading(true)
+            // .env file and added to gitignore
+            const response  = await axios.get(`http://api.waqi.info/feed/geo:${lat};${long}/?token=7e16c570675ce49f3b7fe0cffe35149adc77cf8f`)
+            console.log(response.data)
+            if(response.data){
+                setApi(response.data)
+                setLoading(false)
+            }
         }
-        onChange={handleInputChange}
-        onFocus={() => setFilteredOptions([])}
-      />
-      {filteredOptions.length === 0 &&
-        inputValue.length >= 3 &&
-        !selectedOption && <div>No cities found</div>}
-      {filteredOptions.length > 0 && !selectedOption && (
-        <section>
-          {filteredOptions.map((option) => (
-            <div key={option.name} onClick={() => handleOptionSelect(option)}>
-              {`${option.name}, ${option.country}`}
-            </div>
-          ))}
-        </section>
-      )}
+        //if promise fails, catch and show error (+ for slow loading)
+        catch(err){
+            console.log(err)
+            setLoading(false)
+        }
+        
+  }
+
+  return(
+    <div>
+      <div>
+        <input className="search" type="text" value={query} onChange={onChange}></input>
+      </div>
+      <ul className={searchResultsClass}>
+        {cities.filter(city => {
+          const searchTerm = query.toLowerCase();
+          const cityName = city.name.toLowerCase();
+
+          return searchTerm.length >=3 && cityName.startsWith(searchTerm) && (`${city.name}, ${city.country}` !== query);
+        })
+        .map((city) => (
+          <li className="dropdown-item" onClick={()=>handleCitySelect(city)}>{city.name}, {city.country}</li>
+        ))}
+      </ul>
     </div>
-  );
+  )
 };
 
 export default Search;

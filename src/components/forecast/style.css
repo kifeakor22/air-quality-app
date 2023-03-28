@@ -17,3 +17,15 @@
     flex-basis: 200px;
     flex-grow: 1;
 }
+
+.day-card p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@media (max-width: 1250px) {
+    .forecast-container {
+        flex-direction: column;
+    }
+  }

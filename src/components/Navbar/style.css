@@ -3,8 +3,16 @@
     font-weight: bolder;
     padding: 20px;
     font-size: larger;
-  }
+}
 
-.navbar > .search {
+.search {
     width: 40vw;
+}
+
+.dropdown-menu{
+  display: block!important;
+}
+
+.hide{
+  display: hide;
 }

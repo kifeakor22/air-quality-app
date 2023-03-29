@@ -5,7 +5,7 @@ import Jumbotron from "./components/jumbotron";
 import Search from "./components/search/Search";
 import Airquality from "./components/airqualitystats/airqualitystats";
 import Forecast from "./components/forecast/Forecast";
-import Health from "./components/Health/Health"
+import Health from "./components/health/Health";
 import Navbar from "./components/Navbar/Navbar";
 import AirPollutionIcon from "./icon-component/AirPollutionIcon";
 import PollutionDashboard from "./components/pollution-dashboard/pollution-dashboard";
@@ -46,11 +46,10 @@ function App() {
         />
       </div>
       <div id="div3">
-        <Forecast {...apiData} />
+        <Forecast {...apiData} icons={<AirPollutionIcon {...apiData} />} />
       </div>
     </div>
   );
 }
 
 export default App;
-

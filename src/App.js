@@ -2,13 +2,12 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import CurrentLocation from "./components/current-location/CurrentLocation";
 import Jumbotron from "./components/jumbotron";
-import Search from "./components/search/Search";
 import Airquality from "./components/airqualitystats/airqualitystats";
 import Forecast from "./components/forecast/Forecast";
-import Health from "./components/Health/Health"
 import Navbar from "./components/Navbar/Navbar";
 import AirPollutionIcon from "./icon-component/AirPollutionIcon";
 import PollutionDashboard from "./components/pollution-dashboard/pollution-dashboard";
+import PollutionText from "./components/pollution-text/PollutionText";
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState("");
@@ -42,7 +41,7 @@ function App() {
           {...apiData}
           Airquality={<Airquality {...apiData} />}
           icons={<AirPollutionIcon {...apiData} />}
-          health={<Health {...apiData} />}
+          health={<PollutionText {...apiData} />}
         />
       </div>
       <div id="div3">
@@ -53,4 +52,3 @@ function App() {
 }
 
 export default App;
-

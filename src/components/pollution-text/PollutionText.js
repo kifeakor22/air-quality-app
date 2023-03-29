@@ -1,25 +1,25 @@
 import React from "react";
-import PollutionScore from '../pollution-score/PollutionScore';
 
-const PollutionText = ({ PollutionScore }) => {
+const PollutionText = ({ aqi }) => {
+  console.log(aqi);
   let text = "";
-  if (pollutionScore >= 0 && PollutionScore <= 25) {
+  if (aqi >= 0 && aqi <= 25) {
     text = "Good";
-  } else if (pollutionScore > 25 && PollutionScore <= 50) {
+  } else if (aqi > 25 && aqi <= 50) {
     text = "Moderate";
-  } else if (pollutionScore > 50 && PollutionScore <= 100) {
+  } else if (aqi > 50 && aqi <= 100) {
     text = "Moderately Unhealthy";
-  } else if (pollutionScore > 100 && PollutionScore <= 150) {
+  } else if (aqi > 100 && aqi <= 150) {
     text = "Unhealthy for Sensitive Groups";
-  } else if (pollutionScore > 150 && PollutionScore <= 200) {
+  } else if (aqi > 150 && aqi <= 200) {
     text = "Very Unhealthy";
-  } else if (pollutionScore > 200 && PollutionScore <= 500) {
+  } else if (aqi > 200 && aqi <= 500) {
     text = "Hazardous";
   }
 
   return (
     <div>
-      <h1>Pollution Text</h1>
+      <h1>Pollution Level:</h1>
       <h2>{text}</h2>
     </div>
   );
@@ -28,7 +28,7 @@ const PollutionText = ({ PollutionScore }) => {
 export default PollutionText;
 
 // for import into main file later:
-// import PollutionScore from "./PollutionScore";
+// import aqi from "./aqi";
 // import PollutionText from "./PollutionText";
 
 // function App() {
@@ -39,8 +39,8 @@ export default PollutionText;
 
 //   return (
 //     <div>
-//       <PollutionScore geo={geo} />
-//       <PollutionText pollutionScore={aqiData.data.aqi} />
+//       <aqi geo={geo} />
+//       <PollutionText aqi={aqiData.data.aqi} />
 //     </div>
 //   );
 // }

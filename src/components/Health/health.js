@@ -3,7 +3,8 @@ import './health.css'
 const Health = () => {
     return(
         <div>
-            <div className='container'>
+            <div className='info-container'>
+            <div className="information">
               <h2 className='health-info'>Health information</h2>
               <p>
                 Measures concentrations of pollutants on a 1-500 scale. You may need to change your outdoor exercise schedule or location depending on pollutants concentrations:<br></br>
@@ -19,7 +20,7 @@ const Health = () => {
               </p>
 
 
-            
+            </div>
             </div>
         </div>
 

@@ -2,5 +2,12 @@
     justify-content: center;
     height: auto;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 8px 20px 0 rgba(0, 0, 0, 0.48);
+}
 
+@media only screen and (max-width: 600px) {
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

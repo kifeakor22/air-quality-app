@@ -1,0 +1,41 @@
+.pollution-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .pollution-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+  
+  .pollution-title {
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+ @media (min-width: 768px) {
+
+    .pollution-text-container {
+      margin: 50px;
+      padding: 20px;
+    }
+  
+    .pollution-text {
+      font-size: 36px;
+    }
+  
+    .pollution-title {
+      font-size: 24px;
+    }
+  }
+  

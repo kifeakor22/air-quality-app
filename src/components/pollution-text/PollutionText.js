@@ -1,4 +1,5 @@
 import React from "react";
+import "./PollutionText.css"
 
 const PollutionText = ({ aqi }) => {
   console.log(aqi);

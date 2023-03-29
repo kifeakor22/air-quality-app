@@ -2,9 +2,19 @@
     color: var(--mainColor);
     font-size: 2rem;
     margin: 5px;
-    
-    }
+}
 
 .con {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 8px 20px 0 rgba(0, 0, 0, 0.48);
+}
+
+@media only screen and (max-width: 768px) {
+    .air-pollution-icon {
+        font-size: 1.5rem;
+        margin: 3px;
+    }
+    
+    .con {
+        box-shadow: none;
+    }
 }

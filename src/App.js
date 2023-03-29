@@ -17,8 +17,10 @@ function App() {
     <div className="App">
       <Navbar setLocation={setCurrentLocation} setApi={setApiData} />
       <CurrentLocation {...currentLocation} />
+      <AirPollutionIcon {...apiData}/>
       <Forecast {...apiData} />
       <Health {...apiData} />
+      <Jumbotron/>
     </div>
   );
 }

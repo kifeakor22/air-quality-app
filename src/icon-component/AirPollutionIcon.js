@@ -11,27 +11,35 @@ import {
   faTriangleExclamation
 } from '@fortawesome/free-solid-svg-icons';
 // define function that takes in score prop (air pollution score pulled from API)
-function AirPollutionIcon({ score }) {
+function AirPollutionIcon({ aqi }) {
     //useState hook to set first icon state
   const [icon, setIcon] = useState(faPersonBiking);
+  const [bgColor, setBgColor] = useState("var(--vgoodColor)");
 // depending on score value, set icon state variable to corresponding icon
   useEffect(() => {
-    if (score >= 0 && score <= 25) {
+    if (aqi >= 0 && aqi <= 25) {
       setIcon(faPersonBiking);
-    } else if (score > 25 && score <= 50) {
+       setBgColor("var(--vgoodColor)");
+    } else if (aqi > 25 && aqi <= 50) {
       setIcon(faPersonWalking);
-    } else if (score > 50 && score <= 100) {
+       setBgColor("var(--fairColor)");
+    } else if (aqi > 50 && aqi <= 100) {
       setIcon(faSadTear);
-    } else if (score > 100 && score <= 150) {
+     setBgColor("var(--fairColor)");
+    } else if (aqi > 100 && aqi <= 150) {
       setIcon(faHeadSideMask);
-    } else if (score > 150 && score <= 200) {
+      setBgColor("var(--poorColor)");
+    } else if (aqi > 150 && aqi <= 200) {
       setIcon(faLungsVirus);
-    } else if (score > 200 && score <= 500) {
+     setBgColor("var(--vpoorColor)");
+    } else if (aqi > 200 && aqi <= 500) {
       setIcon(faTriangleExclamation);
+      setBgColor("var(--fairColor)");
     }
-  }, [PollutionScore]);
+  }, [PollutionScore, bgColor,aqi]);
+  console.log(`aqi ${aqi}`)
 // return the component, use icon state variable as prop
-  return <FontAwesomeIcon icon={icon} />;
+  return <FontAwesomeIcon icon={icon} className="fa-beat" style={{fontSize: '4em', color: bgColor}}></FontAwesomeIcon>;
 }
 
 

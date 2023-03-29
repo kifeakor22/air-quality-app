@@ -1,5 +1,5 @@
 import React from "react";
-import AirPollutionIcon from "./AirPollutionIcon";
+import AirPollutionIcon from "./AirPollutionIcon/AirPollutionIcon";
 import PollutionScore from "./PollutionScore";
 import PollutionText from "./PollutionText";
 

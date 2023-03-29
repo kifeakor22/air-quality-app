@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import CurrentLocation from "./components/current-location/CurrentLocation";
 import Jumbotron from "./components/jumbotron";
-import Health from "./components/Health/health";
+import HealthInfo from "./components/Health-info/health-info";
 import Author from "./components/Author/author"
 import Search from "./components/search/Search";
 
@@ -14,7 +14,7 @@ function App() {
       <Jumbotron />
 
       <CurrentLocation />
-      <Health/>
+      <HealthInfo/>
       <Author/>
 
       <Search setLocation={setCurrentLocation} />

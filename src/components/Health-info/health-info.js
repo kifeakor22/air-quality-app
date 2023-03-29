@@ -1,6 +1,6 @@
 import React from 'react';
 import './health.css'
-const Health = () => {
+const HealthInfo = () => {
     return(
         <div>
             <div className='info-container'>
@@ -28,4 +28,4 @@ const Health = () => {
 
 
 }
-export default Health;
+export default HealthInfo;

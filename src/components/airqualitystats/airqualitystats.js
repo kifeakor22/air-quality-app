@@ -12,7 +12,7 @@ const Airquality = ({ aqi, dominentpol, iaqi }) => {
     <>
       <div className="d-flex justify-content-center pollutant-container">
         <div className="card airstat order-first">
-          <div>AQI: {aqi}</div>
+          <div>Air Quality Index Score: {aqi}</div>
           <div>Main Pollutant: {dominentpol}</div>
           {iaqi && (
             <div>

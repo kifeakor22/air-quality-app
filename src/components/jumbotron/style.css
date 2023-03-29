@@ -1,12 +1,8 @@
 .jumbotron {
   padding: 20px;
   font-size: large;
-
-  
-
   color: var(--mainColor);
   font-weight: bolder;
-  height: 350px;
 }
 
 .image {

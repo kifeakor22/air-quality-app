@@ -8,6 +8,7 @@ import Forecast from "./components/forecast/Forecast";
 import Health from "./components/Health/Health"
 import Navbar from "./components/Navbar/Navbar";
 import AirPollutionIcon from "./icon-component/AirPollutionIcon";
+import PollutionDashboard from "./components/pollution-dashboard/pollution-dashboard";
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState("");
@@ -17,7 +18,7 @@ function App() {
     <div className="App">
       <Navbar setLocation={setCurrentLocation} setApi={setApiData} />
       <CurrentLocation {...currentLocation} />
-      <AirPollutionIcon {...apiData}/>
+      <PollutionDashboard {...apiData} Airquality={<Airquality {...apiData}/>} icons={<AirPollutionIcon {...apiData}/>}/>
       <Forecast {...apiData} />
       <Health {...apiData} />
       <Jumbotron/>

@@ -11,21 +11,6 @@ const Airquality = ({ aqi, dominentpol, iaqi }) => {
   return (
     <>
       <div className="d-flex justify-content-center pollutant-container">
-        <div>
-          <h3>Pollutants description</h3>
-          {Object.entries(pollutants).map(([key, value]) => (
-            <div className="card airstat" style={{ width: "18rem" }} key={key}>
-              <ul
-                className="list-group list-group-flush"
-                style={{ listStyleType: "none" }}
-              >
-                <li>
-                  {key}: {value}
-                </li>
-              </ul>
-            </div>
-          ))}
-        </div>
         <div className="card airstat order-first">
           <div>AQI: {aqi}</div>
           <div>Main Pollutant: {dominentpol}</div>
@@ -51,6 +36,7 @@ const Airquality = ({ aqi, dominentpol, iaqi }) => {
                     bgColor = "var(--vpoorColor)";
                   }
                   return (
+                    
                     <div className="card">
                       <ul
                         className="list-group list-group-flush card-item"
@@ -79,7 +65,7 @@ const Airquality = ({ aqi, dominentpol, iaqi }) => {
                           />
                         </li>
                       </ul>
-                    </div>
+                    </div> 
                   );
                 })}
             </div>

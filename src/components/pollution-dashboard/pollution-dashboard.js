@@ -1,19 +1,19 @@
 import React from "react";
-import AirPollutionIcon from "./AirPollutionIcon/AirPollutionIcon";
-import PollutionScore from "./PollutionScore";
-import PollutionText from "./PollutionText";
 
-const PollutionDashboard = ({ geo }) => {
+
+
+const PollutionDashboard = (props) => {
   return (
     <div style={{ display: "flex" }}>
       <div style={{ marginRight: "20px" }}>
-        <AirPollutionIcon score={50} />
+        {props.icons}
+        
       </div>
       <div style={{ marginRight: "20px" }}>
-        <PollutionScore geo={geo} />
+        {props.Airquality}
       </div>
       <div>
-        <PollutionText pollutionScore={50} />
+        <h3>description</h3>
       </div>
     </div>
   );

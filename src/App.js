@@ -45,7 +45,7 @@ function App() {
         />
       </div>
       <div id="div3">
-        <Forecast {...apiData} />
+        <Forecast {...apiData} icons={<AirPollutionIcon {...apiData} />} />
       </div>
     </div>
   );

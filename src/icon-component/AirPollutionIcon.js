@@ -39,7 +39,14 @@ function AirPollutionIcon({ aqi }) {
   }, [PollutionScore, bgColor,aqi]);
   console.log(`aqi ${aqi}`)
 // return the component, use icon state variable as prop
-  return <FontAwesomeIcon icon={icon} className="fa-beat" style={{fontSize: '4em', color: bgColor}}></FontAwesomeIcon>;
+  return (
+    <>
+    <div className='container con'>
+      <FontAwesomeIcon icon={icon} className="fa-beat" style={{fontSize: '8em', color: bgColor}}></FontAwesomeIcon>
+    </div>
+    
+    </>
+  )
 }
 
 

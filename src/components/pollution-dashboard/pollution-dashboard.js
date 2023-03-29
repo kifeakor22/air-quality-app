@@ -1,19 +1,19 @@
 import React from "react";
+import "./pollution-dashboard.css"
 
 
 
 const PollutionDashboard = (props) => {
   return (
-    <div style={{ display: "flex" }}>
+    <div className="dashboard container" style={{ display: "flex" }}>
       <div style={{ marginRight: "20px" }}>
-        {props.icons}
-        
+        {props.icons}  
       </div>
       <div style={{ marginRight: "20px" }}>
         {props.Airquality}
       </div>
       <div>
-        <h3>description</h3>
+        {props.health}
       </div>
     </div>
   );

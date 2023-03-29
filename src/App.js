@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CurrentLocation from "./components/current-location/CurrentLocation";
 import Jumbotron from "./components/jumbotron";
 import Search from "./components/search/Search";
@@ -13,17 +13,45 @@ import PollutionDashboard from "./components/pollution-dashboard/pollution-dashb
 function App() {
   const [currentLocation, setCurrentLocation] = useState("");
   const [apiData, setApiData] = useState({});
+  const [activeDiv, setActiveDiv] = useState(1);
+
+  useEffect(() => {
+    // Scroll to the active div whenever it changes
+    const el = document.getElementById(`div${activeDiv}`);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [activeDiv]);
+
+  useEffect(() => {
+    // Set the active div to 2 once the apiData is loaded
+    if (Object.keys(apiData).length > 0) {
+      setActiveDiv(2);
+    }
+  }, [apiData]);
 
   return (
     <div className="App">
       <Navbar setLocation={setCurrentLocation} setApi={setApiData} />
-      <CurrentLocation {...currentLocation} />
-      <PollutionDashboard {...apiData} Airquality={<Airquality {...apiData}/>} icons={<AirPollutionIcon {...apiData}/>}/>
-      <Forecast {...apiData} />
-      <Health {...apiData} />
-      <Jumbotron/>
+      <Jumbotron />
+      <div id="div1">
+        <CurrentLocation {...currentLocation} />
+      </div>
+      <div id="div2">
+        <PollutionDashboard
+          {...apiData}
+          Airquality={<Airquality {...apiData} />}
+          icons={<AirPollutionIcon {...apiData} />}
+          health={<Health {...apiData} />}
+        />
+      </div>
+      <div id="div3">
+        <Forecast {...apiData} />
+      </div>
     </div>
   );
 }
 
+
 export default App;
+

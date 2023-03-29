@@ -20,3 +20,8 @@
     width: 75vw;
   }
 }
+
+.aqi {
+  font-weight: bolder;
+  font-size: larger;
+}

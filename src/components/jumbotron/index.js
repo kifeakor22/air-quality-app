@@ -14,8 +14,11 @@ const Jumbotron = () => {
             </p>
             <p className="lead">
               Our app empowers you with knowledge to make informed decisions
-              about your health. Get real-time air quality updates to protect
-              yourself and loved ones from harmful pollutants.
+              about your health. 
+            </p>
+            <p className="lead">
+              <b>Enter the name of a city into the search bar above to get real-time air quality updates to protect
+              yourself and loved ones from harmful pollutants.</b>
             </p>
             <hr className="my-4" />
             <div className="cta"></div>

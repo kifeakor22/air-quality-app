@@ -8,7 +8,6 @@ const Jumbotron = () => {
         <div className="row">
           <div className="image"></div>
           <div className="jumbotron">
-            <h1 className="display-4">Air Quality Monitor</h1>
             <p className="lead">
               Welcome to our user-friendly air quality monitoring app! Enter
               your location and get real-time updates on air quality.

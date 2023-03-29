@@ -1,0 +1,38 @@
+[
+  {
+    "id": "pm10",
+    "name": "Particle Pollution (pm10)",
+    "about": "Particle pollution comes from many different sources. Fine particles 2.5 micrometers in diameter and smaller come from power plants, industrial processes, vehicle tailpipes, woodstoves, and wildfires. Coarse particles (between 2.5 and 10 micrometers) come from crushing and grindingoperations, road dust, and some agricultural operations.",
+    "health risk": "Particle pollution causes a number of serious health problems, including coughing, wheezing, reduced lung function, asthma attacks, heart attacks and strokes. It also is linked to early death in people with heart or lung disease."
+  },
+  {
+    "id": "pm25",
+    "name": "Particle Pollution (pm25)",
+    "about": "Particle pollution comes from many different sources. Fine particles 2.5 micrometers in diameter and smaller come from power plants, industrial processes, vehicle tailpipes, woodstoves, and wildfires. Coarse particles (between 2.5 and 10 micrometers) come from crushing and grindingoperations, road dust, and some agricultural operations.",
+    "health risk": "Particle pollution causes a number of serious health problems, including coughing, wheezing, reduced lung function, asthma attacks, heart attacks and strokes. It also is linked to early death in people with heart or lung disease."
+  },
+  {
+    "id": "o3",
+    "name": "Ozone",
+    "about": "Ozone is a colorless gas that can be good or bad, depending on where it is. Ozone up high in the stratosphere forms the ozone layer, which shields the earth from the sun’s ultraviolet rays. But ozone at ground level, where we breathe, can harm human health. Ground-level ozone forms when two types of pollutants, volatile organic compounds and nitrogen oxides, react in sunlight. These pollutants come from sources such as vehicles, industries, power plants, and products such as solvents and paints.",
+    "health risk": "Ozone can cause health problems, including coughing, breathing difficulty, and lung damage. Exposure to ozone can make the lungs more susceptible to infection, aggravate lung diseases, increase the frequency of asthma attacks, and increase the risk of death from lung disease."
+  },
+  {
+    "id": "no2",
+    "name": "Nitrogen Dioxide",
+    "about": "NO2 forms from ground-level emissions related to the burning of fossil fuels from vehicles, power plants, industrial sources, and off-road equipment, such asconstruction vehicles and lawn and garden equipment.",
+    "health risk": "Scientific evidence links short-term NO2 exposures, ranging from 30 minutes to 24 hours, with adverse respiratory effects including airway inflammation in healthy people and increased respiratory symptoms inpeople with asthma."
+  },
+  {
+    "id": "co",
+    "name": "Carbon Monoxide",
+    "about": "CO is a colorless, odorless gas that can be harmful when inhaled in large amounts. CO is released when something is burned. The greatest sources of CO to outdoor air are cars,trucks and other vehicles or machinery that burn fossil fuels.",
+    "health risk": "Breathing air with a high concentration of CO reduces the amount of oxygen that can be transported in the blood stream to critical organs like the heart and brain. At very high levels, which are  possible indoors or in other enclosed environments, CO can cause dizziness, confusion, unconsciousness and death."
+  },
+  {
+    "id": "so2",
+    "name": "Sulfur Dioxide",
+    "about": "The largest source of SO2 in the atmosphere is the burning of fossil fuels by power plants and other industrial facilities. Smaller sources of SO2 emissions include: industrial processes such as extracting metal from ore; natural sources such as volcanoes; and locomotives, ships and other vehicles and heavy equipment that burn fuel with a high sulfur content.",
+    "health risk": "Short-term exposures to SO2 can harm the human respiratory system and make breathing difficult. People with asthma, particularly children, are sensitive to these effects of SO2."
+  }
+]

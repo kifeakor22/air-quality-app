@@ -47,36 +47,39 @@ const Search = ({ setLocation, setApi }) => {
   };
 
   return (
-    <div className="search-container">
+    <div className="search-container flex-column justify-content-center">
       <div>
         <input
-          className="search"
+          className="search text-center"
           type="text"
+          placeholder="Start typing your city name..."
           value={query}
           onChange={onChange}
         ></input>
       </div>
-      <ul className={searchResultsClass}>
-        {cities
-          .filter((city) => {
-            const searchTerm = query.toLowerCase();
-            const cityName = city.name.toLowerCase();
+      <div className="d-flex justify-content-center">
+        <ul className={searchResultsClass}>
+          {cities
+            .filter((city) => {
+              const searchTerm = query.toLowerCase();
+              const cityName = city.name.toLowerCase();
 
-            return (
-              searchTerm.length >= 3 &&
-              cityName.startsWith(searchTerm) &&
-              `${city.name}, ${city.country}` !== query
-            );
-          })
-          .map((city) => (
-            <li
-              className="dropdown-item"
-              onClick={() => handleCitySelect(city)}
-            >
-              {city.name}, {city.country}
-            </li>
-          ))}
-      </ul>
+              return (
+                searchTerm.length >= 3 &&
+                cityName.startsWith(searchTerm) &&
+                `${city.name}, ${city.country}` !== query
+              );
+            })
+            .map((city) => (
+              <li
+                className="dropdown-item"
+                onClick={() => handleCitySelect(city)}
+              >
+                {city.name}, {city.country}
+              </li>
+            ))}
+        </ul>
+      </div>
     </div>
   );
 };

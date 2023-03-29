@@ -8,7 +8,7 @@ const Navbar = ({ setLocation, setApi }) => {
       <a className="navbar-brand col-3" href="#">
         City Air Quality Checker
       </a>
-      <div className="d-flex justify-content-center col-6">
+      <div className="d-flex justify-content-center align-items-center col-6">
         <Search setLocation={setLocation} setApi={setApi} />
       </div>
 

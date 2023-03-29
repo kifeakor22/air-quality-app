@@ -42,7 +42,7 @@ function AirPollutionIcon({ aqi }) {
   return (
     <>
     <div className='container con'>
-      <FontAwesomeIcon icon={icon} className="fa-beat" style={{fontSize: '8em', color: bgColor}}></FontAwesomeIcon>
+      <FontAwesomeIcon icon={icon} className="fa-icon" style={{fontSize: '8em', color: bgColor}}></FontAwesomeIcon>
     </div>
     
     </>

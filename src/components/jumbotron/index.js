@@ -21,7 +21,6 @@ const Jumbotron = () => {
               yourself and loved ones from harmful pollutants.</b>
             </p>
             <hr className="my-4" />
-            <div className="cta"></div>
           </div>
         </div>
       </div>

@@ -1,13 +1,13 @@
 [
   {
     "id": "pm10",
-    "name": "Particle Pollution (pm10)",
+    "name": "Particle (pm10)",
     "about": "Particle pollution comes from many different sources. Fine particles 2.5 micrometers in diameter and smaller come from power plants, industrial processes, vehicle tailpipes, woodstoves, and wildfires. Coarse particles (between 2.5 and 10 micrometers) come from crushing and grindingoperations, road dust, and some agricultural operations.",
     "health risk": "Particle pollution causes a number of serious health problems, including coughing, wheezing, reduced lung function, asthma attacks, heart attacks and strokes. It also is linked to early death in people with heart or lung disease."
   },
   {
     "id": "pm25",
-    "name": "Particle Pollution (pm25)",
+    "name": "Particle (pm25)",
     "about": "Particle pollution comes from many different sources. Fine particles 2.5 micrometers in diameter and smaller come from power plants, industrial processes, vehicle tailpipes, woodstoves, and wildfires. Coarse particles (between 2.5 and 10 micrometers) come from crushing and grindingoperations, road dust, and some agricultural operations.",
     "health risk": "Particle pollution causes a number of serious health problems, including coughing, wheezing, reduced lung function, asthma attacks, heart attacks and strokes. It also is linked to early death in people with heart or lung disease."
   },

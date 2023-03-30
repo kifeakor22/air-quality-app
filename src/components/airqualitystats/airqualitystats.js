@@ -2,11 +2,10 @@ import React from "react";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
-
+import healthData from "../health/health.json";
 
 const Airquality = ({ aqi, dominentpol, iaqi }) => {
   let bgColor;
-
 
   return (
     <>
@@ -26,6 +25,7 @@ const Airquality = ({ aqi, dominentpol, iaqi }) => {
                     key !== "wg"
                 )
                 .map((key) => {
+                  const pollutant = healthData.find((item) => item.id === key);
                   if (iaqi[key].v <= 25) {
                     bgColor = "var(--vgoodColor)";
                   } else if (iaqi[key].v >= 25) {
@@ -36,7 +36,6 @@ const Airquality = ({ aqi, dominentpol, iaqi }) => {
                     bgColor = "var(--vpoorColor)";
                   }
                   return (
-                    
                     <div>
                       <ul
                         className="list-group list-group-flush card-item"
@@ -50,7 +49,8 @@ const Airquality = ({ aqi, dominentpol, iaqi }) => {
                         }}
                       >
                         <li key={key}>
-                          {key}: {Math.floor(iaqi[key].v)}
+                          {pollutant ? pollutant.name : key}:{" "}
+                          {Math.floor(iaqi[key].v)}
                         </li>
                         <li>
                           <FontAwesomeIcon
@@ -65,7 +65,7 @@ const Airquality = ({ aqi, dominentpol, iaqi }) => {
                           />
                         </li>
                       </ul>
-                    </div> 
+                    </div>
                   );
                 })}
             </div>

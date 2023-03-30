@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# Air Quality App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub License](https://img.shields.io/badge/license-MIT-green.svg)
 
-## Available Scripts
+## A React based app which allows a user to search their location for Air Quality information for both current and forecasted air quality. The app also provides a visual dashboard to help inform users about whether it would be safe for different outdoor activities.
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+  <details>
+    <summary>Table of Contents</summary>
+    <ol>
+          <li><a href="#about-the-project">About The Project</a></li>
+          <li><a href="#deployment">Deployment / Code Repository</a></li>
+          <li><a href="#screenshot">Screenshot</a></li>
+          <li><a href="#scope-and-purpose">Scope and Purpose</a></li>
+          <li><a href="#usage">Usage</a></li>
+          <li><a href="#credits">Credits</a></li>
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#questions">Questions</a></li>
+          <li><a href="#contributions">Contributions</a></li>
+          <li><a href="#tests">Tests</a></li>
+          <li><a href="#suggested-future-changes">Suggested Future Changes</a></li>
+          <li><a href="#license">License</a></li>
+        </ol>
+  </details>
 
-### `npm start`
+  <!-- About the Project -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About the Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Deployment / Code Repository
 
-### `npm test`
+[Live Deployment](https://kifeakor22.github.io/air-quality-app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Repository](https://github.com/kifeakor22/air-quality-app)
 
-### `npm run build`
+### Screenshot
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Working version of the app should look like this:
+<img src="../assets/screenshot.png" alt="Working version of project" style="max-width: 800px;">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Scope and Purpose
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Build an interactive web app based in React, which allows for dashboard components to be displayed on screen from an air quality api data fetch. The user searches for their location, which begins filtering from a list of cities after their first three characters, and changes the selection options with every key stroke. The selected city then uses stored latitude and longitude data to fetch api data for the nearest aqi station. The use case for this app is mainly for asthma sufferers to know whether it is safe to exercise outdoors in their area today, and for the 5 days ahead.
 
-### `npm run eject`
+### Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This site and its contents are for educational purposes only. You should have Node.js installed to be able to run this program.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Credits
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The following people have contributed to this app:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [jbkennaugh](https://github.com/jbkennaugh)
+- [kifeakor22](https://github.com/kifeakor22)
+- [lauren-mac](https://github.com/lauren-mac)
+- [Saadu10002](https://github.com/Saadu10002)
+- [TweetingCynical](https://github.com/TweetingCynical)
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To install the necessary tendencies, you must run the following command:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm i
+```
 
-### Code Splitting
+### Questions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If you have any questions or to report bugs, please [open a new issue](https://github.com/kifeakor22/air-quality-app/issues/new) or [email us](mailto:jon@exce-ed.com?subject=air-quality-app)
 
-### Analyzing the Bundle Size
+### Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Please create a fork to contribute to our project.
 
-### Making a Progressive Web App
+### Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To run tests, run the following command:
 
-### Advanced Configuration
+```
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Suggested Future Changes
 
-### Deployment
+- ✅ ~~Hide all dashboard data until the api fetches data;~~
+- ✅ ~~Create a 5 day forecast from the api;~~
+- ✅ ~~Change Search so that the user is presented with options from a list as they type;~~
+- ✅ ~~Change API request so that it fetches the nearest AQI station instead of an exact city match to prevent 'No Data Available' return;~~
+- Add an map api for showing a weather forecast style implementation for current aqi values;
+- Potential for importing news stories about climate issues from the local area;
+- Potential to pull in articles about top tips for staying healthy;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### License
 
-### `npm run build` fails to minify
+MIT License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Copyright (c)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

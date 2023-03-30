@@ -11,6 +11,9 @@ const PollutionDashboard = (props) => {
       <div>
         {props.Airquality}
       </div>
+      <div>
+        {props.pollutionInformation}
+      </div>
     </div>
   );
 };

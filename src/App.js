@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar/Navbar";
 import AirPollutionIcon from "./icon-component/AirPollutionIcon";
 import PollutionDashboard from "./components/pollution-dashboard/pollution-dashboard";
 import PollutionText from "./components/pollution-text/PollutionText";
+import Health from "./components/Health/Health";
 import ColourfulCards from "./components/health-info/health-info";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         Airquality={<Airquality {...apiData} />}
         icons={<AirPollutionIcon {...apiData} />}
         health={<PollutionText {...apiData} />}
+        pollutionInformation={<Health {...apiData}/>}
       />
     </div>
     <div Row className="justify-content-end"><ColourfulCards/></div>

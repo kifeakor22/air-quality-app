@@ -47,7 +47,8 @@ function App() {
         pollutionInformation={<Health {...apiData}/>}
       />
     </div>
-    <div Row className="justify-content-end"><ColourfulCards/></div>
+      <h3>Colour Index Key:</h3>
+      <ColourfulCards/>
     <div  id="div3">
       <Forecast {...apiData} icons={<AirPollutionIcon {...apiData} />} />
     </div>

@@ -1,24 +1,33 @@
+.card-body {
+  color: white!important;
+}
+
+.colour-index-container{
+  width: 85vw;
+  margin: 0 auto;
+}
+
 .vgood {
-    background-color: #8ea604;
-  }
+  background-color: #8ea604!important;
+}
   
-  .good {
-    background-color: #f5bb00;
-  }
+.good {
+  background-color: #f5bb00!important;
+}
   
-  .fair {
-    background-color: #ec9f05;
-  }
-  
-  .poor {
-    background-color: #d76a03;
-  }
-  
-  .vpoor {
-    background-color: #bf3100;
-  }
-  
-  .hazardous {
-    background-color: #3c1934;
-  }
+.fair {
+  background-color: #ec9f05!important;
+}
+
+.poor {
+  background-color: #d76a03!important;
+}
+
+.vpoor {
+  background-color: #bf3100!important;
+}
+
+.hazardous {
+  background-color: #3c1934!important;
+}
   

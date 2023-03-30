@@ -32,7 +32,7 @@ const [aqiData, setAqiData] = useState(null)
     useEffect(() => {
         getAQI()
         //dependency array, dependant on geo prop
-    }, [city, geo])
+    }, [city, geo, getAQI])
 
 return (
 

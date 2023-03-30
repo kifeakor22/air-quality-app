@@ -36,7 +36,7 @@ function AirPollutionIcon({ aqi }) {
       setIcon(faTriangleExclamation);
       setBgColor("var(--fairColor)");
     }
-  }, [PollutionScore, bgColor, aqi]);
+  }, [bgColor, aqi]);
   console.log(`aqi ${aqi}`);
   // return the component, use icon state variable as prop
   return (

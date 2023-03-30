@@ -5,7 +5,7 @@ import "./style.css";
 
 const Search = ({ setLocation, setApi }) => {
   const [query, setQuery] = useState("");
-  const [loading, setLoading] = useState(false);
+ 
   const [searchResultsClass, setSearchResultsClass] = useState("hide");
 
   const onChange = (e) => {
@@ -29,7 +29,6 @@ const Search = ({ setLocation, setApi }) => {
 
   const getAQI = async (lat, long) => {
     try {
-      setLoading(true);
       // .env file and added to gitignore
       const response = await axios.get(
         `http://api.waqi.info/feed/geo:${lat};${long}/?token=7e16c570675ce49f3b7fe0cffe35149adc77cf8f`
@@ -37,12 +36,10 @@ const Search = ({ setLocation, setApi }) => {
       console.log(response.data);
       if (response.data) {
         setApi(response.data.data);
-        setLoading(false);
       }
     } catch (err) {
       //if promise fails, catch and show error (+ for slow loading)
       console.log(err);
-      setLoading(false);
     }
   };
 

@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import pollutantsData from "./pollutants.json";
+
 
 const Airquality = ({ aqi, dominentpol, iaqi }) => {
   let bgColor;
@@ -26,9 +26,9 @@ const Airquality = ({ aqi, dominentpol, iaqi }) => {
                     key !== "wg"
                 )
                 .map((key) => {
-                  if (iaqi[key].v <= 50) {
+                  if (iaqi[key].v <= 25) {
                     bgColor = "var(--vgoodColor)";
-                  } else if (iaqi[key].v >= 51) {
+                  } else if (iaqi[key].v >= 25) {
                     bgColor = "var(--fairColor)";
                   } else if (iaqi[key].v >= 101) {
                     bgColor = "var(--poorColor)";

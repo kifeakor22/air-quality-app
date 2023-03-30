@@ -16,7 +16,7 @@ const ColourfulCards = () => {
     <div className='mb-3 colour-index-container align-self-center d-flex'>
       <Row className="justify-content-end">
         {cardData.map((card, index) => (
-          <Col md={4} key={index}>
+          <Col md={4} key={index} className="flex-grow-1">
             <Card className={`text-black ${card.colour}`}>
               <Card.Body>
                 <Card.Text>

@@ -1,0 +1,24 @@
+.vgood {
+    background-color: #8ea604;
+  }
+  
+  .good {
+    background-color: #f5bb00;
+  }
+  
+  .fair {
+    background-color: #ec9f05;
+  }
+  
+  .poor {
+    background-color: #d76a03;
+  }
+  
+  .vpoor {
+    background-color: #bf3100;
+  }
+  
+  .hazardous {
+    background-color: #3c1934;
+  }
+  

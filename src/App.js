@@ -33,7 +33,7 @@ function App() {
   <div className="App">
     <Navbar setLocation={setCurrentLocation} setApi={setApiData} />
     <Jumbotron />
-    <div style={{ display: activeDiv === 1 ? "block" : "none" }} id="div1">
+    <div style={{ display: activeDiv === 2 ? "block" : "none" }} id="div1">
       <CurrentLocation {...currentLocation} />
     </div>
     <div style={{ display: activeDiv === 2 ? "block" : "none" }} id="div2">

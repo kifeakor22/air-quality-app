@@ -30,6 +30,7 @@ function App() {
   }, [apiData]);
 
  return (
+
   <div className="App">
     <Navbar setLocation={setCurrentLocation} setApi={setApiData} />
     <div style={{ display: activeDiv === 2 ? "block" : "none" }} id="div1">
@@ -48,8 +49,8 @@ function App() {
     </div>
     <Jumbotron />
   </div>
-);
 
+);
 }
 
 export default App;

@@ -31,7 +31,7 @@ const Search = ({ setLocation, setApi }) => {
     try {
       // .env file and added to gitignore
       const response = await axios.get(
-        `http://api.waqi.info/feed/geo:${lat};${long}/?token=7e16c570675ce49f3b7fe0cffe35149adc77cf8f`
+        `https://api.waqi.info/feed/geo:${lat};${long}/?token=7e16c570675ce49f3b7fe0cffe35149adc77cf8f`
       );
       console.log(response.data);
       if (response.data) {

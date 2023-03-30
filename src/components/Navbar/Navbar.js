@@ -5,9 +5,9 @@ import "./style.css";
 const Navbar = ({ setLocation, setApi }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light px-3">
-      <a className="navbar-brand col-3" href="#">
+      <button className="navbar-brand col-3 btn btn-outline">
         City Air Quality Checker
-      </a>
+      </button>
       <div className="d-flex justify-content-center align-items-center col-6">
         <Search setLocation={setLocation} setApi={setApi} />
       </div>
@@ -18,9 +18,9 @@ const Navbar = ({ setLocation, setApi }) => {
       >
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <a className="nav-link" href="#">
+            <button className="nav-link btn btn-outline">
               Home <span className="sr-only">(current)</span>
-            </a>
+            </button>
           </li>
         </ul>
       </div>

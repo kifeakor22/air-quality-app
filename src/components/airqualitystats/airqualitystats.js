@@ -6,7 +6,7 @@ import pollutantsData from "./pollutants.json";
 
 const Airquality = ({ aqi, dominentpol, iaqi }) => {
   let bgColor;
-  const pollutants = pollutantsData[0];
+
 
   return (
     <>

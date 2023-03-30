@@ -29,14 +29,18 @@
 
 ### Deployment / Code Repository
 
-[Live Deployment](https://kifeakor22.github.io/air-quality-app/)
+[Live Deployment](https://calm-narwhal-f7ffd6.netlify.app/)
 
 [Repository](https://github.com/kifeakor22/air-quality-app)
+
+[Presentation](https://docs.google.com/presentation/d/1zDtDcPj7qmLtqPSRzJKOY8c84TqXqr4hYXpqDz9d18w/edit?usp=sharing)
+
+[Video Walkthrough](https://drive.google.com/file/d/11zyrAp6vFo9d0udhf8ny0K_yEUeV3THE/view?usp=share_link)
 
 ### Screenshot
 
 Working version of the app should look like this:
-<img src="../assets/screenshot.png" alt="Working version of project" style="max-width: 800px;">
+<img src="./assets/screenshot.png" alt="Working version of project" style="max-width: 800px;">
 
 ### Scope and Purpose
 

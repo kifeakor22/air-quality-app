@@ -1,5 +1,5 @@
 import React from "react";
-import AirPollutionIcon from "../../icon-component/AirPollutionIcon";
+import AirPollutionIcon from "../icon-component/AirPollutionIcon";
 import "./style.css";
 
 const Forecast = ({ forecast, dominentpol, icons }) => {

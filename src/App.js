@@ -5,7 +5,7 @@ import Jumbotron from "./components/jumbotron";
 import Airquality from "./components/airqualitystats/airqualitystats";
 import Forecast from "./components/forecast/Forecast";
 import Navbar from "./components/Navbar/Navbar";
-import AirPollutionIcon from "./icon-component/AirPollutionIcon";
+import AirPollutionIcon from "./components/icon-component/AirPollutionIcon";
 import PollutionDashboard from "./components/pollution-dashboard/pollution-dashboard";
 import PollutionText from "./components/pollution-text/PollutionText";
 import Health from "./components/health/Health";

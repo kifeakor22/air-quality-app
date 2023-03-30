@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState} from "react";
 import cities from "./cities.json";
 import axios from "axios";
 import "./style.css";

@@ -1,10 +1,19 @@
 .dashboard {
-    justify-content: center;
+    justify-content: space-around;
     height: auto;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 85vw!important;
+    border-radius: 5px;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 8px 20px 0 rgba(0, 0, 0, 0.48);
 }
 
-@media only screen and (max-width: 600px) {
+.dashboard h1, 
+.dashboard h2 {
+  color: var(--mainColor)!important;
+}
+
+@media only screen and (max-width: 770px) {
   .dashboard {
     display: flex;
     flex-direction: column;

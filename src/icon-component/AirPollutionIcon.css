@@ -1,6 +1,8 @@
 .air-pollution-icon {
   color: var(--mainColor);
   font-size: 2rem;
-  margin: 5px;
-  padding: 5px;
+}
+
+.con{
+  padding: 20px;
 }

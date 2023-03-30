@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./AirPollutionIcon.css";
-import PollutionScore from "../pollution-score/PollutionScore";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPersonBiking,

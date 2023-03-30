@@ -37,8 +37,10 @@ const Forecast = ({ forecast, dominentpol, icons }) => {
             bgColor = "var(--fairColor)";
           } else if (avg <= 150) {
             bgColor = "var(--poorColor)";
-          } else {
+          } else if (avg <= 200) {
             bgColor = "var(--vpoorColor)";
+          } else {
+            bgColor = "var(--hazardous)";
           }
 
           return (

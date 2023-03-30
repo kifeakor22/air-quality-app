@@ -15,7 +15,6 @@ code {
 /* Import fonts from Google api */
 @import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap");
 
-
 /* Store colours and fonts for use sitewide */
 :root {
   --mainColor: #005250;
@@ -25,5 +24,6 @@ code {
   --fairColor: #ec9f05;
   --poorColor: #d76a03;
   --vpoorColor: #bf3100;
+  --hazardous: #3c1934;
   --coreFont: Comfortaa;
 }

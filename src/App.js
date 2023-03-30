@@ -9,6 +9,7 @@ import AirPollutionIcon from "./icon-component/AirPollutionIcon";
 import PollutionDashboard from "./components/pollution-dashboard/pollution-dashboard";
 import PollutionText from "./components/pollution-text/PollutionText";
 import Health from "./components/Health/Health";
+import ColourfulCards from "./components/health-info/health-info";
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState("");
@@ -46,6 +47,7 @@ function App() {
         pollutionInformation={<Health {...apiData}/>}
       />
     </div>
+    <div Row className="justify-content-end"><ColourfulCards/></div>
     <div  id="div3">
       <Forecast {...apiData} icons={<AirPollutionIcon {...apiData} />} />
     </div>

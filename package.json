@@ -13,6 +13,7 @@
     "bootstrap": "^5.2.3",
     "cities.json": "^1.1.18",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.9.0",

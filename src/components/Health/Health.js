@@ -12,7 +12,7 @@ const Health = ({ dominentpol }) => {
             style={{ width: "18rem" }}
             key={item.id}
           >
-            <div className="risk">
+            <div className="risk mb-3">
               <strong>{item.name}:</strong><br></br> 
               {item["health risk"]}
             </div>

@@ -4,7 +4,7 @@
   flex-wrap: wrap;
 }
 
-h1 {
+.forecast-outer {
   color: var(--mainColor)
 }
 
@@ -25,10 +25,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-content: center;
-}
-
-.day-card h1 {
-  color: white;
 }
 
 .forecast-outer {

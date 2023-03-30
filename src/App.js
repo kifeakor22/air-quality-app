@@ -30,6 +30,7 @@ function App() {
   }, [apiData]);
 
  return (
+
   <div className="App">
     <Navbar setLocation={setCurrentLocation} setApi={setApiData} />
     <Jumbotron />
@@ -48,8 +49,8 @@ function App() {
       <Forecast {...apiData} icons={<AirPollutionIcon {...apiData} />} />
     </div>
   </div>
-);
 
+);
 }
 
 export default App;

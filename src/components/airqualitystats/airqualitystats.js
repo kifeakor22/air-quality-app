@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import healthData from "../health/health.json";
+import healthData from "../Health/health.json";
 
 const Airquality = ({ aqi, dominentpol, iaqi }) => {
   let bgColor;

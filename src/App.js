@@ -29,26 +29,27 @@ function App() {
     }
   }, [apiData]);
 
-  return (
-    <div className="App">
-      <Navbar setLocation={setCurrentLocation} setApi={setApiData} />
-      <Jumbotron />
-      <div id="div1">
-        <CurrentLocation {...currentLocation} />
-      </div>
-      <div id="div2">
-        <PollutionDashboard
-          {...apiData}
-          Airquality={<Airquality {...apiData} />}
-          icons={<AirPollutionIcon {...apiData} />}
-          health={<PollutionText {...apiData} />}
-        />
-      </div>
-      <div id="div3">
-        <Forecast {...apiData} icons={<AirPollutionIcon {...apiData} />} />
-      </div>
+ return (
+  <div className="App">
+    <Navbar setLocation={setCurrentLocation} setApi={setApiData} />
+    <Jumbotron />
+    <div style={{ display: activeDiv === 1 ? "block" : "none" }} id="div1">
+      <CurrentLocation {...currentLocation} />
     </div>
-  );
+    <div style={{ display: activeDiv === 2 ? "block" : "none" }} id="div2">
+      <PollutionDashboard
+        {...apiData}
+        Airquality={<Airquality {...apiData} />}
+        icons={<AirPollutionIcon {...apiData} />}
+        health={<PollutionText {...apiData} />}
+      />
+    </div>
+    <div  id="div3">
+      <Forecast {...apiData} icons={<AirPollutionIcon {...apiData} />} />
+    </div>
+  </div>
+);
+
 }
 
 export default App;

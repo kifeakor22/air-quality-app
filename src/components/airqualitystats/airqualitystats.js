@@ -37,7 +37,7 @@ const Airquality = ({ aqi, dominentpol, iaqi }) => {
                   }
                   return (
                     
-                    <div className="card">
+                    <div>
                       <ul
                         className="list-group list-group-flush card-item"
                         style={{

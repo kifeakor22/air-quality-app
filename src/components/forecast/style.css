@@ -4,6 +4,10 @@
   flex-wrap: wrap;
 }
 
+h1 {
+  color: var(--mainColor)
+}
+
 .day-card {
   color: var(--accentColor);
   background-color: var(--secondaryColor);
@@ -23,10 +27,14 @@
   align-content: center;
 }
 
+.day-card h1 {
+  color: white;
+}
+
 .forecast-outer {
-  width: 75vw;
+  width: 85vw!important;
   padding: 5px;
-  margin: 20px;
+  margin: auto;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 8px 20px 0 rgba(0, 0, 0, 0.48);
   border-radius: 5px;
 }

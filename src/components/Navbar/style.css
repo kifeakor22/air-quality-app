@@ -22,7 +22,7 @@
 
 @media (max-width: 768px) {
   .navbar-brand {
-    display: none;
+    display: none!important;
   }
   .search {
     display: flex;

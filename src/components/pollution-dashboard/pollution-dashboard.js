@@ -3,14 +3,12 @@ import "./pollution-dashboard.css"
 
 const PollutionDashboard = (props) => {
   return (
-    <div className="dashboard container" style={{ display: "flex" }}>
-      <div style={{ marginRight: "20px" }}>
-        {props.icons}  
-      </div>
+    <div className="dashboard" style={{ display: "flex" }}>
       <div>
+        {props.icons}
         {props.health}
       </div>
-      <div style={{ marginRight: "20px" }}>
+      <div>
         {props.Airquality}
       </div>
     </div>

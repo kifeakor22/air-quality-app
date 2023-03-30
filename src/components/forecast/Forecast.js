@@ -5,14 +5,14 @@ import "./style.css";
 const Forecast = ({ forecast, dominentpol, icons }) => {
   console.log(icons);
   if (!forecast) {
-    return <div>No data available</div>;
+    return null;
   }
 
   const today = new Date();
   today.setHours(0, 0, 0, 0); // Sets so that it is not actual time, but start of the day
 
   return (
-    <div className="card forecast-outer container d-flex justify-content-center">
+    <div className="card forecast-outer d-flex justify-content-center">
       <h1>5-day Forecast</h1>
       <div className="forecast-container container align-content-center">
         {forecast.daily?.[dominentpol]?.map((day) => {

@@ -34,6 +34,7 @@ function App() {
   return (
     <div className="App">
       <Navbar setLocation={setCurrentLocation} setApi={setApiData} />
+      <Jumbotron />
       <div style={{ display: activeDiv === 2 ? "block" : "none" }} id="div1">
         <CurrentLocation {...currentLocation} />
       </div>
@@ -51,7 +52,7 @@ function App() {
       <div id="div3">
         <Forecast {...apiData} icons={<AirPollutionIcon {...apiData} />} />
       </div>
-      <Jumbotron />
+      
     </div>
   );
 }

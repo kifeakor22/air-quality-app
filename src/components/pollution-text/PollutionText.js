@@ -2,7 +2,6 @@ import React from "react";
 import "./PollutionText.css"
 
 const PollutionText = ({ aqi }) => {
-  console.log(aqi);
   let text = "";
   if (aqi >= 0 && aqi <= 25) {
     text = "Good";

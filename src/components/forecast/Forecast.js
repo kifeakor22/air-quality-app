@@ -3,7 +3,6 @@ import AirPollutionIcon from "../icon-component/AirPollutionIcon";
 import "./style.css";
 
 const Forecast = ({ forecast, dominentpol, icons }) => {
-  console.log(icons);
   if (!forecast) {
     return null;
   }

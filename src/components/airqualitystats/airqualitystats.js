@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import healthData from "../Health/health.json";
 
-const Airquality = ({ aqi, dominentpol, iaqi }) => {
+const Airquality = ({ aqi, dominentpol, iaqi}) => {
   let bgColor;
-
-  return (
+  
+  return (  
     <>
       <div className="d-flex justify-content-center pollutant-container">
         <div className="card airstat order-first">
-          <div className="aqi">Air Quality Index Score: {aqi}</div>
+          <div className="aqi">AIR QUALITY INDEX SCORE : {aqi}</div>
           <div className="aqi">Main Pollutant: {dominentpol}</div>
           {iaqi && (
             <div>

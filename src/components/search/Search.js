@@ -33,13 +33,11 @@ const Search = ({ setLocation, setApi }) => {
       const response = await axios.get(
         `https://api.waqi.info/feed/geo:${lat};${long}/?token=7e16c570675ce49f3b7fe0cffe35149adc77cf8f`
       );
-      console.log(response.data);
       if (response.data) {
         setApi(response.data.data);
       }
     } catch (err) {
       //if promise fails, catch and show error (+ for slow loading)
-      console.log(err);
     }
   };
 

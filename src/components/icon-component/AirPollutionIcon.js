@@ -36,7 +36,6 @@ function AirPollutionIcon({ aqi }) {
       setBgColor("var(--fairColor)");
     }
   }, [bgColor, aqi]);
-  console.log(`aqi ${aqi}`);
   // return the component, use icon state variable as prop
   return (
     <>
